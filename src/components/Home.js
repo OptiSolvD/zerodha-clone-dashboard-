@@ -13,39 +13,45 @@ const Home = () => {
 
   useEffect(() => {
 
-    axios.post(
-      "http://localhost:5000/p",
-      {},
-      {
-        withCredentials: true,
-      }
-    )
-    .then((res) => {
+  axios.get(
 
-      const { status, user } = res.data;
+    "http://localhost:5000/verify",
 
-      if (status) {
+    {
+      withCredentials: true,
+    }
 
-        setUser(user);
+  )
 
-        setLoading(false);
+  .then((res) => {
 
-      } else {
+    const { status, user } = res.data;
 
-        window.location.href = "http://localhost:3000/login";
+    if (status) {
 
-      }
+      setUser(user);
 
-    })
-    .catch((err) => {
+      setLoading(false);
 
-      console.log(err);
+    } else {
 
-      window.location.href = "http://localhost:3000/login";
+      window.location.href =
+        "http://localhost:3000/login";
 
-    });
+    }
 
-  }, []);
+  })
+
+  .catch((err) => {
+
+    console.log(err);
+
+    window.location.href =
+      "http://localhost:3000/login";
+
+  });
+
+}, []);
 
   if (loading) {
 

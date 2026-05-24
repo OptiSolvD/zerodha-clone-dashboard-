@@ -8,11 +8,30 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/allHoldings").then((res) => {
-      // console.log(res.data);
-      setAllHoldings(res.data);
-    });
-  }, []);
+
+  axios.get(
+
+    "http://localhost:5000/allHoldings",
+
+    {
+      withCredentials: true,
+    }
+
+  )
+
+  .then((res) => {
+
+    setAllHoldings(res.data);
+
+  })
+
+  .catch((err) => {
+
+    console.log(err);
+
+  });
+
+}, []);
 
   // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   const labels = allHoldings.map((subArray) => subArray["name"]);

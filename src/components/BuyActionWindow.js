@@ -16,13 +16,25 @@ const BuyActionWindow = ({ uid, price }) => {
   console.log(stockQuantity);
   console.log(price);
 
-    axios.post("http://localhost:5000/newOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: (stockQuantity * price).toFixed(2),
-      mode: "BUY",
-    });
+    axios.post(
 
+  "http://localhost:5000/newOrder",
+
+  {
+    name: uid,
+
+    qty: Number(stockQuantity),
+
+    price: Number(price),
+
+    mode: "BUY",
+  },
+
+  {
+    withCredentials: true,
+  }
+
+);
     GeneralContext.closeBuyWindow();
   };
 
