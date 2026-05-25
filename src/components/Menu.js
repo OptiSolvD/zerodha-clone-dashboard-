@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
+import ProfileMenu from './ProfileMenu';
 
 const Menu = ({ user }) => {
   const [selectedMenu, setSelectedMenu] = useState(0);
@@ -94,6 +95,21 @@ const Menu = ({ user }) => {
           <div className="avatar">{user.username.charAt(0).toUpperCase()}</div>
           <p className="username">{user.username}</p>
         </div>
+         <ProfileMenu
+
+          isProfileDropdown={
+
+            isProfileDropdownOpen
+
+          }
+
+          setIsProfileDropdown={
+
+            setIsProfileDropdownOpen
+
+          }
+
+        />
       </div>
     </div>
   );
