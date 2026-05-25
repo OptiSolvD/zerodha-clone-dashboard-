@@ -21,7 +21,7 @@ const BuyActionWindow = ({ uid, price }) => {
 
     await axios.post(
 
-      "http://localhost:5000/newOrder",
+      "https://zerodha-clone-server-r4uq.onrender.com/newOrder",
 
       {
 

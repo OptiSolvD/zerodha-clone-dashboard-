@@ -15,7 +15,7 @@ const Home = () => {
 
   axios.get(
 
-    "http://localhost:5000/verify",
+    "https://zerodha-clone-server-r4uq.onrender.com/verify",
 
     {
       withCredentials: true,
@@ -36,7 +36,7 @@ const Home = () => {
     } else {
 
       window.location.href =
-        "http://localhost:3000/signup";
+        "zerodha-clone-landing-c3vz.vercel.app/signup";
 
     }
 
@@ -47,7 +47,7 @@ const Home = () => {
     console.log(err);
 
     window.location.href =
-      "http://localhost:3000/signup";
+      "zerodha-clone-landing-c3vz.vercel.app/signup";
 
   });
 

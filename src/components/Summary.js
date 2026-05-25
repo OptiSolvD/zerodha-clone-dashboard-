@@ -16,7 +16,7 @@ const Summary = () => {
 
     axios.get(
 
-      "http://localhost:5000/verify",
+      "https://zerodha-clone-server-r4uq.onrender.com/verify",
 
       {
         withCredentials: true,
@@ -44,7 +44,7 @@ const Summary = () => {
 
     axios.get(
 
-      "http://localhost:5000/allHoldings",
+      "https://zerodha-clone-server-r4uq.onrender.com/allHoldings",
 
       {
         withCredentials: true,

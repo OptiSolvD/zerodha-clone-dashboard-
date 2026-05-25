@@ -18,7 +18,7 @@ const ProfileMenu = ({
 
       await axios.get(
 
-        "http://localhost:5000/logout",
+        "https://zerodha-clone-server-r4uq.onrender.com/logout",
 
         {
           withCredentials: true,
@@ -27,7 +27,7 @@ const ProfileMenu = ({
       );
 
       window.location.href =
-        "http://localhost:3000/signup";
+        "zerodha-clone-landing-c3vz.vercel.app/signup";
       } catch (error) {
 
       console.log(error);

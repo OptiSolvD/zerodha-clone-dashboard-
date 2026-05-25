@@ -11,7 +11,7 @@ const Holdings = () => {
 
   axios.get(
 
-    "http://localhost:5000/allHoldings",
+    "https://zerodha-clone-server-r4uq.onrender.com/allHoldings",
 
     {
       withCredentials: true,
