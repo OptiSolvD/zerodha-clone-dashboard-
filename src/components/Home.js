@@ -36,7 +36,7 @@ const Home = () => {
     } else {
 
       window.location.href =
-        "zerodha-clone-landing-c3vz.vercel.app/signup";
+        "https://zerodha-clone-landing-c3vz.vercel.app/signup";
 
     }
 
@@ -47,7 +47,7 @@ const Home = () => {
     console.log(err);
 
     window.location.href =
-      "zerodha-clone-landing-c3vz.vercel.app/signup";
+      "https://zerodha-clone-landing-c3vz.vercel.app/signup";
 
   });
 

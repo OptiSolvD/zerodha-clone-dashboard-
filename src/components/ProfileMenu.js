@@ -27,7 +27,7 @@ const ProfileMenu = ({
       );
 
       window.location.href =
-        "zerodha-clone-landing-c3vz.vercel.app/signup";
+        "https://zerodha-clone-landing-c3vz.vercel.app/signup";
       } catch (error) {
 
       console.log(error);
