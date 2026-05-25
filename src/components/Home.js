@@ -36,7 +36,7 @@ const Home = () => {
     } else {
 
       window.location.href =
-        "http://localhost:3000/login";
+        "http://localhost:3000/signup";
 
     }
 
@@ -47,7 +47,7 @@ const Home = () => {
     console.log(err);
 
     window.location.href =
-      "http://localhost:3000/login";
+      "http://localhost:3000/signup";
 
   });
 
